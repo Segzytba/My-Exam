@@ -1,0 +1,234 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(to bottom right, #f9fafb, #e5ecf6);
+  padding: 4rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  background-color: #ddd;
+  color: #222;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.hero-img {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.joined {
+  margin-top: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.features,
+.about,
+.journey,
+.membership,
+.testimonial {
+  margin-top: 4rem;
+}
+
+.feature,
+.about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature img,
+.about-content img {
+  width: 300px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.feature ul,
+.plan ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.feature li::before {
+  content: "✔";
+  margin-right: 0.5rem;
+}
+
+.journey .steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.journey .steps div {
+  background: #f3f4f6;
+  padding: 1rem;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.plans {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.plan {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.plan.highlight {
+  background: #e0f2fe;
+  border: 2px solid #3b82f6;
+}
+
+.testimonial {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.footer .btn {
+  margin-top: 1rem;
+}
+
+.footer .joined {
+  color: #ccc;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive styles --- */
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .feature,
+  .about-content,
+  .plans,
+  .journey .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature img,
+  .about-content img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .plan {
+    width: 100%;
+  }
+
+  .tagline {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile (480px and down) */
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 1.4rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .journey .steps div {
+    min-width: 100%;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    padding: 2rem 1rem;
+  }
+}
